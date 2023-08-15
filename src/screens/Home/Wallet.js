@@ -7,8 +7,7 @@ import {useWalletConnect} from '@walletconnect/react-native-dapp';
 const Wallet = ({navigation}) => {
   const connector = useWalletConnect();
   const ConnectWallet = async () => {
-    // await connector.connect().then(() => navigation.navigate('Borrow'));
-    navigation.navigate("Borrow");
+    await connector.connect().then(() => navigation.navigate('Borrow'));
   };
   return (
     <>
