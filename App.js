@@ -7,6 +7,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import MainNavigation from './src/navigations/MainNavigation';
 import {withWalletConnect} from '@walletconnect/react-native-dapp';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store';
+
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
@@ -16,7 +19,9 @@ const App = () => {
     <>
       <NavigationContainer>
         <NativeBaseProvider>
-          <MainNavigation />
+          <Provider store={store}>
+            <MainNavigation />
+          </Provider>
         </NativeBaseProvider>
       </NavigationContainer>
     </>

@@ -1,4 +1,2 @@
-const INFURA_PROJECT_ID = '';
-export default {
-  INFURA_PROJECT_ID,
-};
+export const YOUR_PROVIDER_LINK =
+"https://bsc-dataseed.binance.org";

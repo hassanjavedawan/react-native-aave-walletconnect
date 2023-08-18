@@ -9,12 +9,12 @@ import {
 import React, {useState, useMemo} from 'react';
 import {HStack, ScrollView} from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
-import INFURA_PROJECT_ID from '../../../env';
+import {YOUR_PROVIDER_LINK_BSC} from '../../../env';
 import {useWalletConnect} from '@walletconnect/react-native-dapp';
 import Web3 from 'web3';
 
 const Borrow = ({navigation}) => {
-  const RPC_URL = `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`;
+  const RPC_URL = `https://mainnet.infura.io/v3/${YOUR_PROVIDER_LINK_BSC}`;
   const web3 = useMemo(() => new Web3(RPC_URL), []);
 
   const handleBorrow = async () => {
